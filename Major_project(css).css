@@ -1,0 +1,268 @@
+body {
+  font-family: "Montserrat", serif;
+  margin: 0;
+  background-color: black;
+  color: white;
+  overflow: hidden; /* Prevents scrollbars */
+}
+.main {
+  display: flex;
+  height: 100vh;
+  padding: 0.5rem;
+}
+.sidebar {
+  background-color: black;
+  width: 340px;
+  border-radius: 1rem; /* Rounded corners 1rem=16px*/
+  margin-right: 0.5rem;
+}
+.main-content {
+  background-color: #121212;
+  flex: 1;
+  border-radius: 1rem; /* Rounded corners 1rem=16px*/
+  overflow: auto; /* Scrollable not always but when its necessary */
+  padding: 0 1.5rem 0 1.5rem;
+}
+.music-player {
+  background-color: black;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  height: 72px;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav {
+  background-color: #121212;
+  border-radius: 1rem; /* Rounded corners 1rem=16px*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100px;
+  padding: 0.5rem 0.75rem; /* Padding 0.5rem=8px 0.75rem=12px*/
+}
+
+.nav-option {
+  line-height: 2.5rem; /* Line height 2.5rem=40px*/
+  opacity: 0.7;
+  padding-left: 0.5rem 0.75rem; /* Padding 0.5rem=8px*/
+}
+
+.nav-option:hover {
+  opacity: 1;
+}
+
+.nav-option i {
+  font-size: 1.5rem; /* Font size 1.5rem=24px*/
+}
+
+.nav-option a {
+  font-size: 1rem; /* Font size 1rem=16px*/
+  margin-left: 0.5rem; /* Margin 0.5rem=8px*/
+}
+
+.library {
+  background-color: #121212;
+  border-radius: 1rem; /* Rounded corners 1rem=16px*/
+  height: 100%;
+  margin-top: 0.5rem; /* Margin top 1rem=16px*/
+  padding: 0.5rem 0.75rem;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lib-option img {
+  height: 1.25rem; /* Height 1.25rem=20px*/
+  width: 1.25rem; /* Width 1.25rem=20px*/
+}
+
+.icons {
+  font-size: 1.25rem;
+  display: flex;
+}
+
+.icons i {
+  margin-right: 1rem;
+  opacity: 0.7;
+}
+
+.icons i:hover {
+  opacity: 1;
+}
+
+.box {
+  background-color: #232323;
+  height: 8rem; /* Height 10rem=160px*/
+  padding: 0.75rem 1rem; /* Padding 1rem=16px 1.25rem=20px*/
+  border-radius: 0.75rem;
+  margin: 0.75rem 0 1.75rem 0; /* Margin 0.5rem=8px*/
+}
+
+.box-p1 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.box-p2 {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+.badge {
+  border: none;
+  background-color: white;
+  border-radius: 100px;
+  padding: 0.25rem 1rem;
+  font-weight: 700;
+  margin-top: 0.5rem; /* Margin top 0.5rem=8px*/
+  height: 2rem;
+  width: fit-content; /* Width fit-content=auto (additional spacing)*/
+}
+
+.dark-badge {
+  background-color: black;
+  color: white;
+}
+
+.sticky-nav {
+  top: 0;
+  background-color: #121212;
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0 1rem 0;
+  z-index: 10;
+}
+
+.sticky-nav-icons {
+  margin-left: 0.75rem;
+}
+
+.sticky-nav-options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-item {
+  margin-right: 1rem;
+}
+
+@media (max-width: 1000px) {
+  .hide {
+    display: none;
+  }
+}
+
+.card {
+  background-color: #232323;
+  width: 150px;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-left: 1.5rem;
+  margin-top: 1rem;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-img {
+  width: 100%; /* in its own width*/
+  border-radius: 0.5rem;
+}
+
+.card-title {
+  font-weight: 600;
+}
+
+.card-info {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.footer {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.line {
+  height: 50%;
+  width: 90%;
+  border-top: 1px solid white;
+  opacity: 0.4;
+}
+
+.music-player {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.album {
+  width: 25%;
+}
+
+.player {
+  width: 50%;
+}
+
+.player-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.controls {
+  width: 25%;
+}
+
+.player-control-icons {
+  height: 1rem;
+  margin-right: 1.75rem;
+  opacity: 0.7;
+}
+
+.player-control-icons:hover {
+  opacity: 1;
+}
+
+.playback-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-bar {
+  width: 70%;
+  appearance: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.progress-bar::-webkit-slider-runnable-track {
+  background-color: #ddd;
+  border-radius: 100px;
+  height: 0.2rem;
+}
+
+.progress-bar::-webkit-slider-thumb {
+  appearance: none;
+  background-color: #1bd760;
+  border-radius: 50%;
+  height: 1rem;
+  width: 1rem;
+  cursor: pointer;
+  margin-top: -6px;
+}
